@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ReactMarkdown from "react-markdown"
 import { Card } from "./ui/card"
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
@@ -95,7 +96,7 @@ export function Chat() {
                   : "bg-gray-100 dark:bg-gray-800"
               }`}
             >
-              {msg.content}
+              <ReactMarkdown>{msg.content}</ReactMarkdown>
             </div>
           </div>
         ))}

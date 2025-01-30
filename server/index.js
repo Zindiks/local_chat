@@ -22,15 +22,15 @@ const app = Fastify({ logger: envToLogger[environment] ?? true })
 
 // // Register CORS
 app.register(cors, {
-  origin: "*",
-  methods: ["POST", "OPTIONS", "GET"]})
+  origin: '*',
+  methods: ["GET", "POST"],
+})
 
 // Chat completion endpoint
 app.post("/api/chat", async (request, reply) => {
   const { messages } = request.body
 
   console.log(request.body)
-
 
   //connect to Ollama
   const response = await fetch("http://localhost:11434/api/generate", {
@@ -74,4 +74,3 @@ const start = async () => {
 }
 
 start()
-
