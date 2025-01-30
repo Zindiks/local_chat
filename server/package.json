@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@fastify/cors": "^10.0.2",
+    "@fastify/websocket": "^11.0.2",
+    "fastify": "^5.2.1",
+    "node-fetch": "^3.3.2",
+    "pino": "^9.6.0",
+    "pino-http": "^10.4.0",
+    "pino-pretty": "^13.0.0"
+  }
+}
